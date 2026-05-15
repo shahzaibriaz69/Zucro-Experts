@@ -48,6 +48,37 @@ body {
     background: var(--orange); 
     border-radius: 2px; 
 }
+
+/* ============ BUTTONS ============ */
+.btn-primary {
+  background: var(--orange);
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all .3s;
+  display: inline-block;
+}
+.btn-primary:hover {
+  background: var(--orange2);
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(255,106,0,0.4);
+}
+.btn-secondary {
+  background: transparent;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  border: 1px solid rgba(255,255,255,0.2);
+  transition: all .3s;
+  display: inline-block;
+}
+.btn-secondary:hover { border-color: var(--orange); color: var(--orange); }
  
 /* ============ STICKY TOP BAR ============ */
 .sticky-bar {
@@ -135,3 +166,150 @@ nav {
     background: var(--orange2); 
     transform: scale(1.05); 
 }
+
+.hero {
+  min-height: 100vh;
+  padding: 160px 80px 100px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 70% 50%, rgba(255,106,0,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 50% 80% at 10% 80%, rgba(255,106,0,0.05) 0%, transparent 50%);
+}
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  max-width: 1300px;
+  margin: 0 auto;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(255,106,0,0.12);
+  border: 1px solid rgba(255,106,0,0.3);
+  padding: 6px 16px;
+  border-radius: 50px;
+  font-size: 12px;
+  color: var(--orange);
+  margin-bottom: 28px;
+}
+.hero-badge::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: var(--orange);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+.hero h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #fff;
+  margin-bottom: 20px;
+}
+.hero h1 span { color: var(--orange); }
+.hero-sub {
+  font-size: 16px;
+  color: var(--muted);
+  margin-bottom: 16px;
+  line-height: 1.7;
+}
+.hero-platforms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+.platform-tag {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  padding: 5px 14px;
+  border-radius: 50px;
+  font-size: 12px;
+  color: var(--muted);
+}
+.hero-btns {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.hero-dashboard {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 20px;
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  animation: float 4s ease-in-out infinite;
+}
+.dash-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.dash-title  { font-size: 13px; color: var(--muted); }
+.dash-live {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #4ade80;
+}
+.dash-live::before {
+  content: '';
+  width: 6px; height: 6px;
+  background: #4ade80;
+  border-radius: 50%;
+  animation: pulse 1s infinite;
+}
+.dash-stats {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+.dash-stat {
+  background: rgba(255,255,255,0.04);
+  border-radius: 10px;
+  padding: 14px;
+}
+.dash-stat-val {
+  font-family: 'Syne', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #fff;
+}
+.dash-stat-lbl    { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.dash-stat-change { font-size: 11px; color: #4ade80; margin-top: 4px; }
+.dash-chart {
+  background: rgba(255,255,255,0.03);
+  border-radius: 10px;
+  padding: 16px;
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  gap: 6px;
+}
+.bar {
+  background: var(--orange);
+  border-radius: 4px 4px 0 0;
+  flex: 1;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+.bar:hover { opacity: 1; }
+.bar.hi    { opacity: 1; }
