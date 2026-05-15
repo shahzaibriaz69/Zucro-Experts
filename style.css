@@ -386,3 +386,35 @@ h2 span { color: var(--orange); }
   font-size: 15px;
   font-weight: 500;
 }
+
+.solution-section { background: var(--navy); }
+.solution-flow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  max-width: 900px;
+  margin: 0 auto 50px;
+  flex-wrap: wrap;
+}
+.flow-step {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px 28px;
+  text-align: center;
+}
+.flow-arrow       { color: var(--orange); font-size: 24px; padding: 0 12px; }
+.flow-step-icon   { font-size: 28px; margin-bottom: 8px; }
+.flow-step-title  { font-size: 13px; color: var(--muted); }
+.flow-step-name   { font-size: 15px; font-weight: 500; color: #fff; }
+.solution-result {
+  text-align: center;
+  background: rgba(255,106,0,0.08);
+  border: 1px solid rgba(255,106,0,0.2);
+  border-radius: 16px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.solution-result p { color: var(--orange); font-size: 17px; font-weight: 500; }
