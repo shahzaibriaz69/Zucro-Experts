@@ -489,3 +489,32 @@ h2 span { color: var(--orange); }
   transition: opacity .3s;
 }
 .service-card:hover .service-learn { opacity: 1; }
+
+.ai-section { background: var(--navy2); position: relative; overflow: hidden; }
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.ai-card {
+  background: var(--glass);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  padding: 24px;
+  transition: all .3s;
+}
+.ai-card:hover { border-color: rgba(255,106,0,0.3); transform: translateY(-4px); }
+.ai-card-icon { font-size: 28px; margin-bottom: 12px; }
+.ai-card h4   { font-size: 15px; font-weight: 600; color: #fff; margin-bottom: 8px; }
+.ai-list      { list-style: none; }
+.ai-list li {
+  font-size: 12px;
+  color: var(--muted);
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.ai-list li::before { content: '›'; color: var(--orange); }
